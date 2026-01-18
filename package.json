@@ -1,0 +1,33 @@
+{
+  "name": "authentication-basics-practice",
+  "version": "1.0.0",
+  "description": "A minimal express app that allows uses to sign up, log in &amp; log out as part of authentication practice.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axlothecook/Authentication-Basics-Practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/axlothecook/Authentication-Basics-Practice/issues"
+  },
+  "homepage": "https://github.com/axlothecook/Authentication-Basics-Practice#readme",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "ejs": "^4.0.1",
+    "express": "^5.2.1",
+    "express-session": "^1.18.2",
+    "morgan": "^1.10.1",
+    "nodemon": "^3.1.11",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "pg": "^8.17.1"
+  }
+}
