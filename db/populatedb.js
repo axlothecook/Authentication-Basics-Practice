@@ -1,7 +1,13 @@
 const { Client } = require('pg');
 require('dotenv').config();
 
-const SQL = ``;
+const SQL = `
+CREATE TABLE users (
+   id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+   username VARCHAR ( 255 ),
+   password VARCHAR ( 255 )
+);
+`;
 
 const main = async () => {
     ('seeding...');

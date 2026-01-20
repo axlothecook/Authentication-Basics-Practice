@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/svgs.css">
-    <link rel="stylesheet" href="/homepageStyle.css">
     <title><%= title %></title>
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
@@ -16,7 +15,23 @@
             <%- include('partials/errors', { errors }) %>
         <% } %>
         <div class="content">
-            <h1>hello :D</h1>
+            <% if (locals.user) {%>
+                <h1>WELCOME BACK <%= user.username %></h1>
+                <a href="/log-out" class="btn">LOG OUT</a>
+            <% } else { %>
+                <h1>please log in</h1>
+                <form action="/log-in" method="POST">
+                    <label for="username">Username</label>
+                    <input id="username" name="username" placeholder="username" type="text" />
+                    <label for="password">Password</label>
+                    <input id="password" name="password" type="password" />
+                    <button type="submit" class="btn">Log In</button>
+                </form>
+                <div class="sign-up-option">
+                    <h3>Or</h3>
+                    <a href="/sign-up" class="btn">Sign Up</a>
+                </div>
+            <%}%>
         </div>
     </div>
     <%- include('partials/footbar') %>

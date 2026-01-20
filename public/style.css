@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5, p {
   font-weight: 400;
 }
 
-input, button, textarea, input:focus, button:hover, button:focus, textarea:hover, textarea:focus {
+input, textarea, input:focus, textarea:hover, textarea:focus {
   outline: none;
   border: none;
 }
@@ -115,9 +115,13 @@ footer h1 a {
 }
 
 .content {
-  padding-top: 2.5rem;
-  border: 1px solid blue;
+  padding-top: 7rem;
+  /* border: 1px solid blue; */
   width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
 }
 
 .btn {
@@ -129,6 +133,7 @@ footer h1 a {
   border-radius: 7px;
   transition: background-color .4s, color .4s;
   width: fit-content;
+  outline: none;
 }
 
 .btn:hover {
@@ -156,6 +161,20 @@ footer h1 a {
   background-color: #020618;
   padding: .6rem 1rem;
   border-radius: 5px;
+}
+
+form {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.sign-up-option {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 @keyframes disappear {
